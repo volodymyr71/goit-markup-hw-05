@@ -13,6 +13,7 @@
     0.6
   ); /* прозорий колір лінків футера */
   --icon-social-main-color: #AFB1B8;
+  --transition-duration: 250ms
 }
 
 body {
@@ -92,6 +93,29 @@ body {
   letter-spacing: 0.02em;
   color: var(--black-color);
   text-decoration: none;
+}
+
+.menu-link-active {
+  font-weight: 500;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--black-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-link-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 44px;
+
 }
 
 .menu-link:hover,
@@ -520,6 +544,8 @@ background: rgba(255, 255, 255, 0.1);
   margin-right: 10px;
 }
 
+/* PORTFOLIO -------------------- */
+
 .h2-portfolio {
   margin-top: 0;
   margin-bottom: 4px;
@@ -539,10 +565,15 @@ background: rgba(255, 255, 255, 0.1);
 }
 
 .p-portfolio-long {
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 1.556;
   color: var(--white-color);
-  display: none; /*  Приховані параграфи */
+  margin: 0;
+  letter-spacing: 0.03em;
+  padding: 65px 24px;
+  /* display: none;  Приховані параграфи  */
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
 .portfolio-link {
@@ -554,8 +585,33 @@ background: rgba(255, 255, 255, 0.1);
   color: var(--accent-color);
 }
 
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay{
+  transform: translateY(0);
+}
+
+
+.produkt-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .produkt-thumb::after {
+  
+} */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 img {
   display: block;
+  max-width: 100%;
 }
 
 .portfolio-list-work {
