@@ -93,15 +93,11 @@ body {
   letter-spacing: 0.02em;
   color: var(--black-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link-active {
-  font-weight: 500;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: var(--black-color);
-  text-decoration: none;
-  position: relative;
+    position: relative;
 }
 
 .menu-link-active::after {
@@ -130,6 +126,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--gray-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -153,7 +150,9 @@ fill: currentColor;
 .contacts-link-footer {
   line-height: 1, 714;
   color: var(--footer-link-color);
-  text-decoration: none;
+  text-decoration: none; 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 .contacts-link-footer:hover,
@@ -165,6 +164,7 @@ fill: currentColor;
   line-height: 1.714;
   color: var(--white-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -312,6 +312,7 @@ fill: currentColor;
 .about-us-item {
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
+  position: relative;
 }
 
 .h3-title-working {
@@ -319,11 +320,15 @@ fill: currentColor;
   margin-bottom: 0;
   padding-top: 27px;
   padding-bottom: 27px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.143;
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
 }
 
 .h3-title-team {
@@ -402,10 +407,12 @@ fill: currentColor;
   height: 90px;
   border: 1px solid var(--icon-social-main-color);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
   fill: var(--icon-social-main-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon,
@@ -452,6 +459,8 @@ justify-content: center;
 border-radius: 50%;
 width: 44px;
 height: 44px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -488,6 +497,8 @@ border-radius: 50%;
 width: 44px;
 height: 44px;
 background: rgba(255, 255, 255, 0.1);
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-footer {
